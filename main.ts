@@ -9,6 +9,10 @@ DigitalPin.P16,
 )
 tm.on()
 basic.forever(function () {
+    tm.showNumber(pins.analogReadPin(AnalogPin.P0))
+    basic.pause(200)
+})
+basic.forever(function () {
     if (pins.analogReadPin(AnalogPin.P0) < 990 && pins.analogReadPin(AnalogPin.P0) > 982) {
         basic.showIcon(IconNames.Duck)
     } else if (pins.analogReadPin(AnalogPin.P0) > 979 && pins.analogReadPin(AnalogPin.P0) <= 985) {
@@ -37,8 +41,4 @@ basic.forever(function () {
 })
 basic.forever(function () {
 	
-})
-basic.forever(function () {
-    tm.showNumber(pins.analogReadPin(AnalogPin.P0))
-    basic.pause(200)
 })
